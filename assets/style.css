@@ -1,0 +1,11 @@
+.backdrop {
+    margin: auto;
+    width: 50%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+.headings {
+    position: center;
+}

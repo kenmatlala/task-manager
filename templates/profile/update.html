@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block cont %}
+    <div class="backdrop">
+    <h3>Update Task</h3>
+    <div class="container  bg-white shadow-md py-5 form-layout">
+    <form method="POST" action="{% url 'taskapp:update_task' pk=task.pk %}" autocomplete="off">
+        {% csrf_token %}
+
+        {{ form.title|as_crispy_field }}
+        <br><br>
+        {{ form.content| as_crispy_field }}
+        <br><br>
+
+        <br>
+        <input class="btn btn-primary navbar btn" type="submit" value="SUBMIT">
+
+    </form>
+
+    </div>
+    </div>
+{% endblock %}

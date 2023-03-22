@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block cont %}
+    <br><br>
+        <h3 style="align-content: center">My Task</h3>
+    <br>
+        <div class="backdrop">
+        {% for tsk in task %}
+             <div class="container  bg-white shadow-md py-5 form-layout">
+
+                 <h2>{{ tsk.title }}</h2>
+            <br>
+            {{ tsk.content }}
+
+            <br><br>
+
+           <a href="{% url 'taskapp:update_task' tsk.id %}">Update</a>
+           <a href="{% url 'taskapp:deleteTask' tsk.id %}">Delete</a>
+
+             </div>
+        {% endfor %}
+         <br><br>
+        </div>
+             <br><br>
+{% endblock %}
