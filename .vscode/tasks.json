@@ -19,7 +19,13 @@
 				"docker-build"
 			],
 			"python": {
-				"file": "task_manager.py"
+				"args": [
+					"runserver",
+					"0.0.0.0:8000",
+					"--nothreading",
+					"--noreload"
+				],
+				"file": "manage.py"
 			}
 		}
 	]
